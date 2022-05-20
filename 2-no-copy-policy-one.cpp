@@ -8,6 +8,11 @@ private:
 
 public:
     NoCopyPolicy() {}
+    /*
+    Another way to implement No Copy Policy
+    NoCopyClass2(const NoCopyClass2 &) = delete;
+    NoCopyClass2 &operator=(const NoCopyClass2 &) = delete;
+    */
 };
 
 int main()
@@ -19,7 +24,7 @@ int main()
 
 /*
 No copy Policy 
-he simplest policy of all is to forbid copying and assigning class instances all together. 
+The simplest policy of all is to forbid copying and assigning class instances all together. 
 This can be achieved by declaring, but not defining a private copy constructor and 
 assignment operator or alternatively by making both public 
 and assigning the delete operator. The second choice is 
